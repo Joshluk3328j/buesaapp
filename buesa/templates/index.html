@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Main page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700" />
+
+  <!-- css styling -->
+  <link rel="stylesheet" href="{% static '/css/index.css'%}">
+
+  <!-- <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script> -->
+</head>
+
+<body>
+
+  <!-- <py-script>
+    import
+    h=5
+    print(f"hello world{h}")
+  </py-script> -->
+
+  <div class="main-page">
+    <img class="buesa-logo" src="{%static '/assets/BUESA Logo.png'%}" />
+    <div class="main-div">
+      <p class="title">BUESA</p>
+      <p class="sub-title">2024 Elections</p>
+    </div>
+    <!-- this would change the url in the browser and and the url path finder would find the path that matches this and then render the function attached -->
+    <a href="{% url 'getotp' %}">
+      <button class="proceed-btn">Proceed</button>
+    </a>
+  </div>
+  <script>
+    // document.querySelector(
+    //   ".main-page"
+    // ).style.height = `${window.innerHeight}px`;
+  </script>
+</body>
+
+</html>

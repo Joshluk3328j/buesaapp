@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Main Voting link (default)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600" />
+
+  <!-- css styling -->
+  <link rel="stylesheet" href="{% static '/css/votingpage.css'%}" />
+</head>
+
+<body>
+  <div class="main-page">
+    <div class="upper-div">
+      <div class="upper-content">
+        <!-- <button class="back-button">
+        <img class="back-arrow" src="./assets/vector-idJ.png" />
+        </button> -->
+        <div class="header">
+          <span>BUESA Polls <span class="header-sub"> 2024</span> </span>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <!-- <div class="line-1-PUx"></div> -->
+
+    <div class="lower-div">
+      <form class="form">
+        <div class="all-candidates"></div>
+        <div class="submit-div">
+          <input type="submit" class="submit-button" />
+        </div>
+      </form>
+
+      <!-- <button class="submit-button">Submit</button> -->
+    </div>
+  </div>
+
+  <script>
+    class Candidate {
+      constructor(name, link) {
+        (this.name = name), (this.link = link);
+      }
+    }
+
+    const createCandidateBox = function (candidate, post_title) {
+      const link = candidate["link"];
+      const [lastName, firstName] = candidate.name.split(" ");
+
+      const candidateBox = document.createElement("template");
+      candidateBox.innerHTML = `<div class="candidate-box">
+              <img class="profile-img" src="${link}" />
+              <div class="inner-div">
+                <div class="name-div">
+                  <p class="first-name">${firstName}</p>
+                  <p class="last-name">${lastName}</p>
+                </div>
+                <input required 
+                  type="radio"
+                  name="${post_title}"
+                  class="radio-button"
+                  value="${candidate.name}"
+                />
+              </div>
+            </div>`.trim();
+      return candidateBox.content.firstChild;
+    };
+
+    const createCategory = function (post_title, candidateList) {
+      let category = document.createElement("template");
+      category.innerHTML = `<div class="category">
+            <p class="post-title">${post_title}</p>
+          </div>`.trim();
+
+      category = category.content.firstChild;
+
+      for (candidate of candidateList) {
+        category.appendChild(createCandidateBox(candidate, post_title));
+      }
+      // console.log(category.content.firstChild);
+
+      document.querySelector(".all-candidates").appendChild(category);
+    };
+
+    candidate1 = new Candidate("Itua David", "{% static '/assets/BUESA Logo.png'%}");
+    candidate2 = new Candidate(
+      "Itua Iregbeyanose",
+      "{% static '/assets/BUESA Logo.png'%}"
+    );
+    candidate3 = new Candidate("Emax Africa", "{% static '/assets/BUESA Logo.png'%}");
+
+    candidate4 = new Candidate("Babtunde Joseph", "{% static '/assets/BUESA Logo.png'%}");
+
+    candidate5 = new Candidate("Olaniran Gladys", "{% static '/assets/BUESA Logo.png'%}");
+
+    candidate6 = new Candidate("Arome Phoebe", "{% static '/assets/BUESA Logo.png'%}");
+
+    createCategory("Presidential Candidates", [candidate1, candidate4]);
+
+    createCategory("Vice-Presidential Candidates", [
+      candidate2,
+      candidate3,
+      candidate5,
+    ]);
+
+    createCategory("General Secretary Candidates", [
+      candidate4,
+      candidate6,
+      candidate1,
+    ]);
+
+    createCategory("Asst. General Secretary Candidates", [
+      candidate2,
+      candidate6,
+      candidate3,
+    ]);
+
+    createCategory("Financial Secretary Candidates", [
+      candidate4,
+      candidate3,
+      candidate5,
+    ]);
+
+    createCategory("Treasurer Candidates", [
+      candidate2,
+      candidate3,
+      candidate1,
+    ]);
+
+    createCategory("Welfare Secretary Candidates", [
+      candidate4,
+      candidate6,
+      candidate5,
+    ]);
+
+    createCategory("Social Director Candidates", [
+      candidate3,
+      candidate1,
+      candidate6,
+    ]);
+
+    createCategory("Technology Secretary Candidates", [
+      candidate4,
+      candidate6,
+      candidate5,
+    ]);
+
+    createCategory("Asst. Tech. Secretary Candidates", [
+      candidate3,
+      candidate2,
+      candidate5,
+    ]);
+
+    createCategory("Sports Director Candidates", [
+      candidate6,
+      candidate4,
+      candidate1,
+    ]);
+
+    const submit_button = document.querySelector(".submit-button");
+    // submit button
+    let goToNextPage = false;
+
+    // when you click submit button
+    document.querySelector(".form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      goToNextPage = confirm("Are you sure you want to submit?") // returns a boolean to proceed ot not
+      if (goToNextPage) {
+        window.location.href = "./submit"
+      }
+    })
+
+    const onBeforeUnload = function (event) {
+      if (!goToNextPage) event.preventDefault();
+    }
+
+    addEventListener("beforeunload", onBeforeUnload);
+  </script>
+</body>
+
+</html>

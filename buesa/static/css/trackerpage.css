@@ -1,0 +1,2083 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+
+body{
+  min-width: 280px;
+}
+
+.upper-div{
+  /* margin: 2rem 0rem 0rem 0rem; */
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.upper-content {
+  width: 100%;
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  min-height: 30px;
+  
+}
+.back-button{
+  border: 0;
+  background-color: white;
+  margin-left: 20px;
+
+}
+
+.back-arrow {
+  width: 1.8rem;
+  height: 1.4189rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.header {
+  width: 100%;
+  margin-top: 0.1654rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  justify-content: center; 
+}
+
+.header-sub{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+}
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #838282;
+  
+}
+
+.total-votes {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 0.625;
+  color: #00c853;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.main-page {
+  box-sizing: border-box;
+  /* padding-top: 2.6rem; */
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.category {
+  margin: 2rem 0;
+  width: 90%;
+  position: relative;
+  row-gap: 1.2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.candidate-div {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  /* flex-shrink: 0; */
+}
+
+.category-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  /* line-height: 0.625; */
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.main-div {
+  box-sizing: border-box;
+  /* padding: 4.816rem 3.051rem 11.4rem 3.15rem; */
+  width: 100%;
+  row-gap: 2.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.voting-tracker {
+  /* margin-right: 1.8rem; */
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 30px;
+  flex-shrink: 0;
+  --color: red;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+}
+
+.voting-tracker::-webkit-progress-bar{
+  background: var(--background);
+}
+
+.voting-tracker::-webkit-progress-value{
+  background: var(--color);
+}
+
+.candidate-details {
+  /* margin: 1rem 1rem; */
+  width: 100%;
+  /* height: 3rem; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-shrink: 0;
+}
+.candidate-img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  
+}
+.name-and-votes {
+  /* margin: 0.3rem 0; */
+  display: flex;
+  width: calc(100% - 4rem);
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.name {
+  /* margin-right: 1rem; */
+  width: 14rem;
+  /* height: 100%; */
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  /* text-align: center; */
+  
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; */
+}
+
+.votes {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+.frame-81-12L {
+  margin: 0rem 9rem 2.628rem 3rem;
+  width: calc(100% - 12.0006rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-vQC {
+  margin-right: 5.3rem;
+  width: 1.8rem;
+  height: 1.4189rem;
+  cursor: pointer;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.buesa-polls-2024-3Up {
+  margin-top: 0.1654rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+
+.buesa-polls-2024-3Up-sub-1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+}
+.line-1-YyJ {
+  margin-bottom: 1.1371rem;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #838282;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+.rectangle-44-6Hz {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+  
+}
+.frame-92-y6t {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-X8Q {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-4u2 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-DG8 {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-72f6-Mt8 {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-s5n {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-oEL {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-Aag {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.frame-96-fGY {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.vice-presidential-candidates-BVn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-91-7PS {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-3nt {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-aH2 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-83e {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-mfi4-UdJ {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-PkG {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-94-8Sx {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-44-gUU {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.frame-92-mkp {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-XEC {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-5Fi {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-RKa {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-rkdi-y6C {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-shN {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-QhJ {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-BCG {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.frame-97-GjW {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.general-secretary-candidates-1SC {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-91-92c {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-6Te {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-90-6Te .vector-dTa {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-90-6Te .frame-89-ynL {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-90-6Te .frame-89-ynL .auto-group-rbpp-vSg {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-90-6Te .frame-89-ynL .votes-RuE {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-94-Mnt {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-91-92c .frame-94-Mnt .rectangle-44-HgY {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-90-wFJ {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-90-wFJ .vector-HKA {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-90-wFJ .frame-89-ppt {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-90-wFJ .frame-89-ppt .auto-group-hfjz-BQY {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-90-wFJ .frame-89-ppt .votes-VRE {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-93-SLU {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-97-GjW .frame-92-Bmv .frame-93-SLU .rectangle-46-cEx {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .asst-general-secretary-candidates-Szg {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-90-vex {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-90-vex .vector-T96 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-90-vex .frame-89-CcU {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-90-vex .frame-89-CcU .auto-group-dva8-wpx {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-90-vex .frame-89-CcU .votes-THW {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-94-CF6 {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-91-mn4 .frame-94-CF6 .rectangle-44-Ypk {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-90-pGU {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-90-pGU .vector-NHz {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-90-pGU .frame-89-Wf6 {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-90-pGU .frame-89-Wf6 .auto-group-wzvg-fH6 {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-90-pGU .frame-89-Wf6 .votes-AzY {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-93-vD2 {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-98-iHz .frame-92-rqS .frame-93-vD2 .rectangle-46-ghz {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .financial-secretary-candidates-wP2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-90-qDW {
+  margin: 0rem 1.9rem 1rem 0rem;
+  width: calc(100% - 1.9rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-90-qDW .vector-ZQQ {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-90-qDW .frame-89-uDN {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-90-qDW .frame-89-uDN .auto-group-qf5v-Syz {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-90-qDW .frame-89-uDN .votes-NMr {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-94-iAp {
+  margin-right: 1.9rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-91-UNx .frame-94-iAp .rectangle-44-4Va {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k {
+  margin: 0 0.05rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: calc(100% - 0.1rem);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-90-7Cx {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-90-7Cx .vector-Fa4 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-90-7Cx .frame-89-znY {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-90-7Cx .frame-89-znY .auto-group-tjfz-9QY {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-90-7Cx .frame-89-znY .votes-FyN {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-93-zRA {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-99-PMW .frame-92-y6k .frame-93-zRA .rectangle-46-9Yx {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .treasurer-candidates-z3n {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-90-sdN {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-90-sdN .vector-oG8 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-90-sdN .frame-89-jvU {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-90-sdN .frame-89-jvU .auto-group-jbnt-toN {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-90-sdN .frame-89-jvU .votes-aw6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-94-Kdn {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-91-ikU .frame-94-Kdn .rectangle-44-Gov {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-90-w9N {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-90-w9N .vector-5WU {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-90-w9N .frame-89-pix {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-90-w9N .frame-89-pix .auto-group-2rzp-meC {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-90-w9N .frame-89-pix .votes-V4Q {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-93-EGt {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-100-T3r .frame-92-Nrx .frame-93-EGt .rectangle-46-Pfa {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .welfare-secretary-candidates-2iY {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-90-irG {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-90-irG .vector-3tY {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-90-irG .frame-89-PxQ {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-90-irG .frame-89-PxQ .auto-group-ejrp-wyv {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-90-irG .frame-89-PxQ .votes-ff2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-94-1it {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-91-ZyN .frame-94-1it .rectangle-44-mi4 {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-90-ELk {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-90-ELk .vector-BWt {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-90-ELk .frame-89-7fS {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-90-ELk .frame-89-7fS .auto-group-kzdr-fgx {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-90-ELk .frame-89-7fS .votes-aZ2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-93-XDN {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-101-J1r .frame-92-UsN .frame-93-XDN .rectangle-46-tZi {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .pr-officer-candidates-8yr {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-90-SDr {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-90-SDr .vector-BBS {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-90-SDr .frame-89-iSG {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-90-SDr .frame-89-iSG .auto-group-tptn-Tek {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-90-SDr .frame-89-iSG .votes-BKr {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-94-8F6 {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-91-GqA .frame-94-8F6 .rectangle-44-siU {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-90-wyE {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-90-wyE .vector-VE4 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-90-wyE .frame-89-SQC {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-90-wyE .frame-89-SQC .auto-group-kjnx-PqE {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-90-wyE .frame-89-SQC .votes-JSQ {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-93-dzU {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-102-Q2G .frame-92-PRv .frame-93-dzU .rectangle-46-D3a {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .social-director-candidates-qak {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-90-QnG {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-90-QnG .vector-YNg {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-90-QnG .frame-89-HLG {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-90-QnG .frame-89-HLG .auto-group-v9un-EWQ {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-90-QnG .frame-89-HLG .votes-jxx {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-94-UQk {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-91-B8p .frame-94-UQk .rectangle-44-cfN {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.voting-tracker-KfJ .main-div .frame-103-uBJ .frame-92-iTW {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-Gjv {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-DfA {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-xck {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-6sng-haL {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-cxC {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-y24 {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-8fe {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.frame-104-ETn {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.technology-secretary-candidates-xeg {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-91-JCk {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+ .frame-90-TLY {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-BnL {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-XbJ {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-z5ak-UFe {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-BQx {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-94-ifn {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-44-g6p {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.frame-92-C5A {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-xKE {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-6wE {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-eSx {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-28ui-o4x {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-Hkp {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-ERA {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-zv8 {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.frame-105-hZe {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.asst-tech-secretary-candidates-RVe {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-91-kXv {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-77a {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-qJU {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-yvU {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-3arq-jPr {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-3vL {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-94-bS4 {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-44-MRE {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.frame-92-4aY {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-RAC {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-ZnC {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-7Yp {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-uefn-Tsa {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-yqv {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-XMe {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-6Qk {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}
+.frame-106-noN {
+  margin: 0 0.05rem;
+  width: calc(100% - 0.1rem);
+  overflow: hidden;
+  position: relative;
+  row-gap: 2.4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.sports-director-candidates-L4C {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-91-fMN {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-Aov {
+  margin: 0rem 1.8rem 1rem 0rem;
+  width: calc(100% - 1.8rem);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-hJ4 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-EYt {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-cuvi-moi {
+  margin-right: 1rem;
+  width: 14rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-tdS {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #2f51ff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-94-db2 {
+  margin-right: 1.8rem;
+  width: 25.9rem;
+  background-color: rgba(131, 130, 130, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-44-P4Q {
+  width: 20.2rem;
+  height: 3.3rem;
+  background-color: #2f51ff;
+}
+.frame-92-tWx {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+.frame-90-SYU {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.vector-zK6 {
+  margin-right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.frame-89-L84 {
+  margin: 0.3rem 0;
+  height: calc(100% - 0.6rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.auto-group-akcl-GnQ {
+  margin-right: 1rem;
+  width: 15.8rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.votes-aYC {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4285714286;
+  color: #ff862f;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.frame-93-iPW {
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.8000000119);
+  flex-shrink: 0;
+}
+.rectangle-46-t36 {
+  width: 5.7rem;
+  height: 3.3rem;
+  background-color: #ff862f;
+}

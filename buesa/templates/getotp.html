@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Welcome Page(Get OTP)</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C800" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%2C800" />
+
+  <!-- css styling -->
+  <link rel="stylesheet" href="{%static '/css/getotp.css'%}">
+
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/63ccf9df6a.js" crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script> -->
+</head>
+
+<body>
+  <!-- importing python script -->
+  <!-- <script type="py" src="./database_checker.py" config="./pyscript.json"></script>
+  <py-script>
+    import random
+    from database_checker import *
+    get_email("2021/10103")
+    h=random.randint(0,10)
+    print(f"{h}")
+  </py-script> -->
+
+
+  <div class="upper-div">
+
+    <div class="upper-content">
+      {% if messages %}
+      {% for message in messages%}
+      {{ message }}
+      {%endfor%}
+      {% endif %}
+      <div class="header">
+        <span>BUESA Polls <span class="header-sub"> 2024</span> </span>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <div class="main-div">
+    <img class="buesa-logo" src="{%static '/assets/BUESA Logo.png'%}" />
+    <div class="sub-div">
+      <p class="title">Welcome</p>
+      <p class="sub-title">
+        to 2024
+        <span class="buesa-bold"> BUESA </span>
+        Elections
+      </p>
+    </div>
+
+
+
+    <!-- this prevents hackers from hacking the form -->
+    <form class="'form" id="form">
+
+      <div class="input-box">
+
+        <img width="30" height="30" class="matric-img" src="https://img.icons8.com/ios-glyphs/30/123.png" alt="123" />
+
+        <!-- matric number input -->
+
+        <input type="text" id="matric-input" placeholder="Matric Number" name="matric" class="input-label"
+          maxlength="10" />
+      </div>
+
+      <!-- py-click="addfunctionnamehere"  -->
+
+      <input type="submit" class="otp-button" value="Get OTP" id="otp-btn"> </input>
+    </form>
+
+
+    <p class="resend-text">
+      Didn’t receive OTP?
+      <button type="button" class="resend-button">Resend</button>
+    </p>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function getCookie(cname) {
+        let cookieValue = null;
+
+        if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValuje = decodeURIComponent(cookie.substring(name.length + 1))
+              break
+            }
+          }
+        }
+        return cookieValue;
+      }
+      form = document.getElementById('form')
+      form.addEventListener('submit', function (e) {
+        event.preventDefault()
+        const data = document.getElementById('matric-input').value
+        const csrftoken = getCookie('csrftoken')
+        console.log(data)
+
+        fetch('/getotp/', {
+          method: 'POST',
+          body: JSON.stringify({
+            matricNumber: data
+          }),
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+            'X-CSRFToken': csrftoken,
+          }
+        })
+          .then(res => res.json())
+          .then(res => console.log(res.data))
+          .catch(err => console.log(err))
+      })
+    })
+
+
+  </script>
+  <!-- 
+  <script>
+    // selecting form for input
+    const form = document.querySelector(".form");
+
+    const otp_button = document.querySelector(".otp-button");
+    const resend_text = document.querySelector(".resend-text");
+    const matric_box = document.querySelector(".input-box input");
+
+    // getting matric number input
+    const matric_input = document.querySelector("#matric-input");
+
+    // creating otp otp_box
+    const otp_box = document.createElement("template");
+
+    main_div = document.querySelector(".main-div");
+
+
+    otp_box.innerHTML = `<div  class="input-box">
+        <i class="fa-brands fa-keycdn fa-2xl otp-img"></i>
+        <input
+        id="otp-input"
+        type="number"
+        name="otpinput"
+          inputmode="numeric"
+          oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength);"
+          maxlength="6"
+          placeholder="Enter OTP here"
+          class="input-label"
+        />
+      </div>`.trim();
+    const feedback_message = document.createElement("p");
+    feedback_message.classList.add("feedback-message");
+    const get_otp = function () {
+
+      // prevents empty matric input
+
+      if (matric_input.value == "") {
+        feedback_message.textContent = `Invalid Matric Number`;
+        form.insertBefore(feedback_message, otp_button);
+
+        return;
+      }
+
+      //normal get otp 
+
+      console.log(matric_input.value)
+      feedback_message.textContent = "";
+      otp_button.value = "Validate OTP";
+      matric_input.disabled = true;
+
+      // listens for button clicks to add and remove functions from the button
+      otp_button.removeEventListener("click", get_otp)
+      otp_button.addEventListener("click", validate_otp);
+
+      form.insertBefore(otp_box.content, otp_button);
+      resend_text.style.opacity = "1";
+    };
+
+    const validate_otp = function () {
+      const otp_input = document.querySelector("#otp-input");
+      if (otp_input.value == "") {
+        feedback_message.textContent = "Invalid Otp";
+        form.insertBefore(feedback_message, otp_button);
+        return;
+      }
+      // normal validate otp
+      // feedback_message.textContent = "";
+      console.log(otp_input.value)
+      window.location.href = "./votingpage";
+    };
+    otp_button.addEventListener("click", get_otp);
+
+    // prevent page from reloading due to form
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+    })
+  </script>
+-->
+</body>
+
+</html>

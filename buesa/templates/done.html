@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Done</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600%2C700" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700" />
+
+  <!-- css styling -->
+  <link rel="stylesheet" href="{% static '/css/done.css'%}" />
+</head>
+
+<body>
+  <div class="main-div">
+    <!-- <div class="frame-81-Ahi">
+        <img class="vector-HXS" src="./assets/vector-Chz.png" />
+        <p class="buesa-polls-2024-1iL">
+          <span class="buesa-polls-2024-1iL-sub-0">BUESA Polls </span>
+          <span class="buesa-polls-2024-1iL-sub-1">2024</span>
+        </p>
+      </div> -->
+
+    <div class="upper-div">
+      <div class="upper-content">
+        <!-- <button class="back-button">
+              <img class="back-arrow" src="./assets/vector-idJ.png" />
+            </button> -->
+        <div class="header">
+          <span>BUESA Polls <span class="header-sub"> 2024</span> </span>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+
+    <!-- <div class="line-1-TCx"></div> -->
+    <div class="body-div">
+      <div>
+        <div class="green-circle">
+          <img class="tick" src="{% static '/assets/vector-4ep.png'%}" />
+        </div>
+
+        <p class="successful-text">SUCCESSFUL</p>
+        <p class="thanks-for-voting-text">Thanks for voting!</p>
+      </div>
+
+      <button class="see-poll-results-text">See Poll Results</button>
+    </div>
+  </div>
+
+  <script>
+    const seePollButton = document.querySelector(".see-poll-results-text");
+    seePollButton.addEventListener("click", function () {
+      window.location.href = "./vote-tracker";
+    });
+  </script>
+</body>
+
+</html>

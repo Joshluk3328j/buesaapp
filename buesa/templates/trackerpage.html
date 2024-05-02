@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Voting Tracker</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700" />
+
+  <!-- css styling -->
+  <link rel="stylesheet" href="{% static '/css/trackerpage.css'%}" />
+</head>
+
+<body>
+  <div class="main-page">
+    <div class="upper-div">
+      <div class="upper-content">
+        <!-- <button class="back-button">
+        <img class="back-arrow" src="./assets/vector-idJ.png" />
+      </button> -->
+        <div class="header">
+          <span>BUESA Polls <span class="header-sub"> 2024</span> </span>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <p class="total-votes">Votes Casted : 1000</p>
+    <div class="main-div"></div>
+  </div>
+
+  <script>
+    const createCategory = function (title, candidates_list) {
+      color = ["#2f51ff", "#ff862f", "green", "blueviolet", "darkkhaki"];
+      category = document.createElement("template");
+      category.innerHTML = `<div class="category">
+          <p class="category-title">Presidential Candidates</p>
+        </div>`.trim();
+      category = category.content.firstChild;
+      // set category title
+      category.querySelector(".category-title").textContent = title;
+
+      for (let index = 0; index < candidates_list.length; index++) {
+        item = candidates_list[index];
+        category.appendChild(
+          createCandidateItem({
+            link: item["link"],
+            color: color[index % color.length],
+            name: item["name"],
+            votes: item["votes"],
+          })
+        );
+      }
+
+      document.querySelector(".main-div").appendChild(category);
+    };
+
+    const createCandidateItem = function ({ link, color, name, votes }) {
+      candidateItem = document.createElement("template");
+      candidateItem.innerHTML = `
+        <div class="candidate-div">
+          <div class="candidate-details">
+              <img class="candidate-img" src="./assets/vector-ukp.png" />
+              <div class="name-and-votes">
+                <p class="name">Joseph Akinteye</p>
+                <p class="votes">700 votes</p>
+              </div>
+            </div>
+
+            <progress value="40" max="100" class="voting-tracker"></progress>
+
+            
+          </div>`.trim();
+      let item = candidateItem.content.firstChild;
+      // change progress bar color
+      item
+        .querySelector(".voting-tracker")
+        .style.setProperty("--color", color);
+
+      // change votes color
+      item.querySelector(".votes").style.color = color;
+
+      // change image
+      item.querySelector(".candidate-img").setAttribute("Src", link);
+
+      // change progress bar value and max
+      item.querySelector(".voting-tracker").setAttribute("Value", votes);
+      item.querySelector(".voting-tracker").setAttribute("max", totalVotes);
+      // change name
+      item.querySelector(".name").textContent = name;
+      // change vote count
+      item.querySelector(".votes").textContent = votes;
+
+      return item;
+    };
+
+    let totalVotes = 1789;
+
+    document.querySelector(
+      ".total-votes"
+    ).textContent = `Votes Casted : ${totalVotes}`;
+
+    class Candidate {
+      constructor(name, link, votes) {
+        (this.name = name), (this.link = link), (this.votes = votes);
+      }
+    }
+
+    let candidate_object = [
+      new Candidate("Itua David", "{% static 'assets/BUESA Logo.png'%}", "347"),
+      new Candidate("Itua Iregbeyanose", "{% static 'assets/BUESA Logo.png'%}", "1108"),
+      new Candidate("Babatunde Joseph", "{% static 'assets/BUESA Logo.png'%}", "947"),
+      new Candidate("Olusomo Emmanuel", "{% static 'assets/BUESA Logo.png'%}", "997"),
+      new Candidate("Emax Africa", "{% static 'assets/BUESA Logo.png'%}", "1279"),
+    ];
+
+    createCategory("Presidential Candidates", candidate_object.slice(0, 3));
+    createCategory(
+      "Vice-Presidential Candidates",
+      candidate_object.slice(0, 2)
+    );
+    createCategory(
+      "General Secretary Candidates",
+      candidate_object.slice(0, 3)
+    );
+    createCategory(
+      "Asst. General Secretary Candidates",
+      candidate_object.slice(0, 3)
+    );
+    createCategory(
+      "Financial Secretary Candidates",
+      candidate_object.slice(0, 2)
+    );
+    createCategory("Treasurer Candidates", candidate_object.slice(0, 3));
+    createCategory(
+      "Welfare Secretary Candidates",
+      candidate_object.slice(0, 3)
+    );
+    createCategory("Social Director Candidates", candidate_object);
+    createCategory(
+      "Technology Secretary Candidates",
+      candidate_object.slice(0, 2)
+    );
+    createCategory(
+      "Asst. Tech. Secretary Candidates",
+      candidate_object.slice(0, 4)
+    );
+    createCategory(
+      "Sports Director Candidates",
+      candidate_object.slice(0, 3)
+    );
+  </script>
+</body>
+
+</html>

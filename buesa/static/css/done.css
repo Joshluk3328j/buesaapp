@@ -1,0 +1,133 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+.main-div{
+  box-sizing: border-box;
+  /* padding-top: 2.5rem; */
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.body-div{
+  box-sizing: border-box;
+  /* padding: 10.477rem 7.701rem 19.1rem 7.9rem; */
+  width: 100%;
+  align-items: center;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-shrink: 0;
+  min-height: 320px;
+}
+.green-circle {
+  margin: 0rem 2.3rem 3.5rem 2.1rem;
+  box-sizing: border-box;
+  padding: 3rem ;
+  /* width: calc(100% - 4.4rem); */
+  background-color: #00b64c;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tick {
+  /* width: 9.6rem; */
+  height: 8rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.successful-text {
+  margin-bottom: 2.1rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 0.3125;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.thanks-for-voting-text {
+  /* margin: 0rem 0.2rem 19.3rem 0rem; */
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.see-poll-results-text {
+  margin-right: 0.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 0.625;
+  color: #285ee9;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+}
+
+.upper-div{
+  /* margin: 2rem 0rem 0rem 0rem; */
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.upper-content {
+  width: 100%;
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  min-height: 30px;
+  
+}
+
+.header {
+  width: 100%;
+  margin-top: 0.1654rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  justify-content: center; 
+}
+
+.header-sub{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+}
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #838282;
+  
+}

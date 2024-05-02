@@ -1,0 +1,281 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-div {
+  box-sizing: border-box;
+  /* padding-top: 1.5rem; */
+  /* overflow: hidden; */
+  /* position: relative; */
+  background-color: #ffffff;
+  /* padding: 2rem; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 85vh;
+  min-height: 400px;
+}
+
+.upper-div {
+  /* margin: 2rem 0rem 0rem 0rem; */
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.upper-content {
+  width: 100%;
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  min-height: 30px;
+
+}
+
+.header {
+  width: 100%;
+  margin-top: 0.1654rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.header-sub {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #838282;
+
+}
+
+.buesa-logo {
+  /* margin: 0rem 1rem 0.9rem 0rem; */
+  width: 13rem;
+  /* height: 11.5rem; */
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+
+.sub-div {
+  /* margin: 1rem 0; */
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.2222222222;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4285714286;
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+
+.buesa-bold {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.4285714286;
+  margin: 0 4px;
+  /* color: #a70000; */
+  color: red;
+  font-family: Montserrat, 'Source Sans Pro';
+}
+
+.input-box {
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  width: 30%;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+  border: 1px solid #000000;
+  /* background-color: blue; */
+}
+
+.input-label::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* .input-label[type=number] {
+  -moz-appearance: textfield;
+} */
+
+.matric-img,
+.otp-img {
+  margin-right: 1.3rem;
+  object-fit: contain;
+  width: 2rem;
+  /* vertical-align: top; */
+  flex-shrink: 0;
+}
+
+
+
+
+.input-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+  width: 70%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: red;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+
+.otp-button {
+  /* margin: 0rem 5rem; */
+  min-width: 100px;
+  border: 0;
+  height: 4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+  color: #ffffff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #ea0000;
+  border-radius: 3.4rem;
+  flex-shrink: 0;
+}
+
+.otp-button:active {
+  color: #dddddd;
+  background-color: #d10000;
+}
+
+.resend-text {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  /* line-height: 1.6666666667; */
+  color: #000000;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.resend-button {
+  border: 0;
+  background: transparent;
+  color: #ea0000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resend-button:active {
+  background-color: lightblue;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 30px;
+  }
+}
+
+
+#otp-input {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+
+.feedback-message {
+  color: red;
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
